@@ -14,12 +14,12 @@ export default function Hero() {
 					project.
 				</p>
 				<div className="hero-actions">
-					<a className="hero-primary" href="#technologies">
+					<button className="hero-primary">
 						Explore Technologies
-					</a>
-					<a className="hero-secondary" href="#about">
+					</button>
+					<button className="hero-secondary">
 						Learn More
-					</a>
+					</button>
 				</div>
 			</div>
 			<div className="hero-art">

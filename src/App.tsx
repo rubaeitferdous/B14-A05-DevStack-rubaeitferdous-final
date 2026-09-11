@@ -1,7 +1,9 @@
 
+import { Suspense } from "react";
 import "./App.css";
 import Hero from "./components/hero";
 import Navbar from "./components/navbar";
+import TechnologySection from "./components/technologySection";
 
 function App() {
   
@@ -15,6 +17,9 @@ function App() {
     <>
       <Navbar />
       <Hero />
+      <Suspense fallback="Loading...">
+        <TechnologySection />
+      </Suspense>
     </>
   );
 }
