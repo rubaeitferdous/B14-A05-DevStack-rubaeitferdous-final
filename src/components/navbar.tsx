@@ -34,7 +34,7 @@ import logoText from "../assets/images/logo-text.png";
         <div className="auth-actions">
           <button className="sign-in">Sign In</button>
           <button className="sign-up">
-            Sign Up <span>↗</span>
+            Sign Up
           </button>
         </div>
       </nav>
