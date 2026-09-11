@@ -17,7 +17,7 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <Suspense fallback="Loading...">
+       <Suspense fallback={<p>Loading Cards...</p>}>
         <TechnologySection />
       </Suspense>
     </>
