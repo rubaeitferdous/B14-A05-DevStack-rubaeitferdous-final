@@ -7,6 +7,7 @@
   border-bottom: 1px solid var(--line);
 }
 .navbar {
+  position: relative;
   width: min(1180px, calc(100% - 48px));
   height: 76px;
   margin: auto;
@@ -494,6 +495,7 @@
   .navbar {
     width: min(100% - 32px, 1180px);
     gap: 16px;
+    grid-template-columns: 36px minmax(0, 1fr) auto;
   }
 
   .menu-button {
@@ -515,11 +517,11 @@
     background: var(--ink);
   }
 
-  .brand {
+  .navbar-brand {
     justify-self: center;
   }
 
-  .nav-links {
+  .navbar-links {
     position: absolute;
     top: 76px;
     left: 16px;
@@ -533,11 +535,11 @@
     border: 1px solid var(--line);
   }
 
-  .nav-links.is-open {
+  .navbar-links.is-open {
     display: flex;
   }
 
-  .auth-actions {
+  .navbar-actions {
     gap: 10px;
   }
 
@@ -623,12 +625,12 @@
     width: 100%;
   }
 
-  .brand img {
+  .navbar-brand img {
     max-width: 130px;
   }
 
   .sign-in {
-    display: none;
+    padding: 9px 0;
   }
 
   .sign-up {

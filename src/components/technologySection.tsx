@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
 import technologiesData from "../data/technologies.json";
 import type { Technology } from "../assets/types/tehnology";
 import MyStack from "./myStack";
@@ -15,15 +16,25 @@ export default function TechnologySection() {
 
 	function addToStack(technology: Technology) {
 		if (selectedIds.includes(technology.id)) {
-			window.alert(`${technology.name} is already in your stack.`);
+			toast.warning(`${technology.name} is already in your stack.`);
 			return;
 		}
 
 		setSelectedIds((currentIds) => [...currentIds, technology.id]);
+		toast.success(`${technology.name} added to your stack.`);
 	}
 
 	function removeFromStack(id: string) {
+		const technology = technologies.find((item) => item.id === id);
 		setSelectedIds((currentIds) => currentIds.filter((currentId) => currentId !== id));
+		if (technology) {
+			toast.info(`${technology.name} removed from your stack.`);
+		}
+	}
+
+	function removeAllFromStack() {
+		setSelectedIds([]);
+		toast.info("All technologies removed from your stack.");
 	}
 
 	return (
@@ -49,7 +60,7 @@ export default function TechnologySection() {
 				<MyStack
 					selectedTechnologies={selectedTechnologies}
 					onRemove={removeFromStack}
-					onRemoveAll={() => setSelectedIds([])}
+					onRemoveAll={removeAllFromStack}
 				/>
 			</div>
 		</section>
