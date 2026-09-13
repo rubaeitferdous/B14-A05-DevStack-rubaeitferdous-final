@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import Hero from "./components/hero";
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 import TechnologySection from "./components/technologySection";
 
 function App() {
@@ -22,7 +23,10 @@ function App() {
        <Suspense fallback={<p>Loading Cards...</p>}>
         <TechnologySection />
       </Suspense>
-      <ToastContainer position="top-right" autoClose={2500} newestOnTop />
+
+      
+      <Footer />
+      <ToastContainer position="bottom-right" autoClose={2000} newestOnTop />
     </>
   );
 }
