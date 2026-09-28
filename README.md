@@ -1,5 +1,7 @@
 # Dev Stack
 
+Live Link : https://b14-a05-devstack-rubaeitferdous-final.netlify.app/
+
 Dev Stack is a polished technology discovery tool for developers planning their next project. Explore popular frontend, backend, database, and tooling options, compare their details, and build a personal technology stack in one focused interface.
 
 ## Preview
